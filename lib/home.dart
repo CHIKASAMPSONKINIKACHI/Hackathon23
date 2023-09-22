@@ -122,6 +122,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
+                      fontWeight: FontWeight.w700,
                       fontStyle: FontStyle.italic),
                 ),
                 const SizedBox(height: 14),
@@ -649,7 +650,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Image.asset('images/done.png'),
                             Text(
-                              'The Standard License grants you a \nnon-exclusive right to navigate and \nregister for our event',
+                              'The Standard License grants you a \nnon-exclusive right to navigate and \nregister for our event.',
                               style: GoogleFonts.montserrat(
                                   color: Colors.white,
                                   fontSize: 12,
@@ -666,7 +667,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Image.asset('images/done.png'),
                             Text(
-                              'You are licensed to use the item \navailable at any free source sites, for \nyour project developement',
+                              'You are licensed to use the item \navailable at any free source sites, for \nyour project developement.',
                               style: GoogleFonts.montserrat(
                                   color: Colors.white,
                                   fontSize: 12,
@@ -682,43 +683,151 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 48),
-                Center(
-                  child: Stack(
-                    children: [
-                      Image.asset('images/stack1.png'),
-                      Positioned(
-                        // bottom: 40,
-                        top: 150,
-                        //left: -10,
-                        child: Image.asset('images/stack2.png'),
-                      ),
-                      const SizedBox(height: 48),
-                    ],
-                  ),
+                Stack(
+                  children: [
+                    Image.asset('images/stack1.png'),
+                    Positioned(
+                      // bottom: 40,
+                      top: 150,
+                      //left: -10,
+                      child: Image.asset('images/stack2.png'),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 48),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 40, vertical: 40),
-                      child: Row(
+
+                //LAST LINE GETLINKED AND SOCIAL MEDIAS
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    children: [
+                      Row(
                         children: [
-                          Text(
-                            'get',
-                            style: GoogleFonts.montserrat(
-                                color: Colors.white, fontSize: 20),
-                          ),
-                          Text(
-                            'linked',
-                            style: GoogleFonts.montserrat(
-                                color: Colors.purple, fontSize: 20),
+                          Image.asset('images/star.png'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  const SizedBox(width: 34),
+                                  Text(
+                                    'get',
+                                    style: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  Text(
+                                    'linked',
+                                    style: GoogleFonts.montserrat(
+                                        color: Color(0XFFD434FE),
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(width: 34),
+                              Text(
+                                'Getlinked Tech Hackathon is a technology \ninnovation program established by a group \nof organizations with the aim of showcasing \nyoung and talented individuals in the field \nof technology.',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.left,
+                              ),
+                              //TERMS OF USE ROW
+                              const SizedBox(width: 34),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Terms of Use ',
+                                    style: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Image.asset('images/line.png'),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    ' Privacy Policy.',
+                                    style: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 32),
+                              Text(
+                                'Useful Links ',
+                                style: GoogleFonts.montserrat(
+                                    color: Color(0XFFD434FE),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600),
+                                textAlign: TextAlign.left,
+                              ),
+                              Text(
+                                'Overview',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.left,
+                              ),
+                              Text(
+                                'Timeline',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.left,
+                              ),
+                              Text(
+                                'FAQs',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.left,
+                              ),
+                              Text(
+                                'Register',
+                                style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.left,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Follow us',
+                                    style: GoogleFonts.montserrat(
+                                        color: Color(0XFFD434FE),
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                  ),
+                                  Image.asset('images/Socialmedia.png'),
+                                ],
+                              )
+                            ],
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
