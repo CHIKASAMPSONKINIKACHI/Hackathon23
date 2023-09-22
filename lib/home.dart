@@ -31,19 +31,20 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Padding(
+                    Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 40, vertical: 40),
                       child: Row(
                         children: [
                           Text(
                             'get',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white, fontSize: 20),
                           ),
                           Text(
                             'linked',
-                            style:
-                                TextStyle(color: Colors.purple, fontSize: 20),
+                            style: GoogleFonts.montserrat(
+                                color: Colors.purple, fontSize: 20),
                           ),
                         ],
                       ),
@@ -338,25 +339,25 @@ class HomePage extends StatelessWidget {
                 WriiteUp(
                   text1: 'Innovation and Creativity:',
                   text2:
-                      'Evaluate the \n uniqueness and creativity of solution. \n Consider whether it addresses a real-world \n problem in a novel way or introdues innovative \n features.',
+                      ' Evaluate the \n uniqueness and creativity of solution. \n Consider whether it addresses a real-world \n problem in a novel way or introdues innovative \n features.',
                 ),
                 const SizedBox(height: 8),
                 WriiteUp(
                   text1: 'Functionality:',
                   text2:
-                      'Assess how well the solution \n works. Does it perform it\'s intendend functions \n effectively and without major issues? Judges \n would consider the completeness and \n robustness of the solution.',
+                      ' Assess how well the solution \n works. Does it perform it\'s intendend functions \n effectively and without major issues? Judges \n would consider the completeness and \n robustness of the solution.',
                 ),
                 const SizedBox(height: 8),
                 WriiteUp(
                   text1: 'Impact and Relevance:',
                   text2:
-                      'Determine the  \n potential impact of the solution in the real world. \n Does it address a significant problem. and is it \n relevant to the target audience? Judges would \n  assess the potential social, economic, or \n environmental benefits.',
+                      ' Determine the  \n potential impact of the solution in the real world. \n Does it address a significant problem. and is it \n relevant to the target audience? Judges would \n  assess the potential social, economic, or \n environmental benefits.',
                 ),
                 const SizedBox(height: 8),
                 WriiteUp(
                   text1: 'Technical Complexity:',
                   text2:
-                      'Evaluate the technical \n sophistication of the solution. Judges would \n consider the complexity of the code. the use of  \n advanced technologies or algorithms. and the \n scalablity of the solution.',
+                      ' Evaluate the technical \n sophistication of the solution. Judges would \n consider the complexity of the code. the use of  \n advanced technologies or algorithms. and the \n scalablity of the solution.',
                 ),
                 const SizedBox(height: 8),
                 WriiteUp(
@@ -584,14 +585,141 @@ class HomePage extends StatelessWidget {
 
                 const SizedBox(height: 8),
                 Text(
-                  'Below are our privacy & policy, which outlines a\n lot of goodies. it\'s our aim to always take care of our participants.',
+                  'Below are our privacy & policy, which outlines a\n lot of goodies. it\'s our aim to always take care of our \n participants.',
                   style: GoogleFonts.montserrat(
                       color: Colors.white,
                       fontSize: 12,
                       fontWeight: FontWeight.w300),
                   textAlign: TextAlign.center,
                 ),
+                const SizedBox(height: 18),
+                Container(
+                  height: 635,
+                  width: 295,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      // width: 5,
+                      color: Color(0XFFD434FE),
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // color: Colors.purple,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const SizedBox(height: 28),
+                      Text(
+                        'At getlinked tech Hackathon 1.0, we \n value your privacy and are committed \n to protecting your personal information.\n This Privacy Policy outlines how we collect,\n use, disclose, and safeguard your data\n when you participate in our tech hackathon\n event. By participating in our event, you\n consent to the practices described in this\n policy.',
+                        style: GoogleFonts.montserrat(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 24),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Licensing Policy',
+                              style: GoogleFonts.montserrat(
+                                  color: const Color(0XFFD434FE),
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w700),
+                              textAlign: TextAlign.left,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Here are terms of our Standard License:',
+                              style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w700),
+                              textAlign: TextAlign.left,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset('images/done.png'),
+                            Text(
+                              'The Standard License grants you a \nnon-exclusive right to navigate and \nregister for our event',
+                              style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400),
+                              textAlign: TextAlign.left,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset('images/done.png'),
+                            Text(
+                              'You are licensed to use the item \navailable at any free source sites, for \nyour project developement',
+                              style: GoogleFonts.montserrat(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400),
+                              textAlign: TextAlign.left,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 22),
+                      MyButton(onPressed: () {}, buttontext: 'Read more'),
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 48),
+                Center(
+                  child: Stack(
+                    children: [
+                      Image.asset('images/stack1.png'),
+                      Positioned(
+                        // bottom: 40,
+                        top: 150,
+                        //left: -10,
+                        child: Image.asset('images/stack2.png'),
+                      ),
+                      const SizedBox(height: 48),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 48),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                      child: Row(
+                        children: [
+                          Text(
+                            'get',
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white, fontSize: 20),
+                          ),
+                          Text(
+                            'linked',
+                            style: GoogleFonts.montserrat(
+                                color: Colors.purple, fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
