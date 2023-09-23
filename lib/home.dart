@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 10),
                       child: Row(
                         children: [
                           Text(
@@ -600,9 +600,9 @@ class HomePage extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                       // width: 5,
-                      color: Color(0XFFD434FE),
+                      color: const Color(0XFFD434FE),
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    borderRadius: const BorderRadius.all(Radius.circular(5)),
                     // color: Colors.purple,
                   ),
                   child: Column(
@@ -724,7 +724,7 @@ class HomePage extends StatelessWidget {
                                   Text(
                                     'linked',
                                     style: GoogleFonts.montserrat(
-                                        color: Color(0XFFD434FE),
+                                        color: const Color(0XFFD434FE),
                                         fontSize: 20,
                                         fontWeight: FontWeight.w400),
                                   ),
@@ -769,7 +769,7 @@ class HomePage extends StatelessWidget {
                               Text(
                                 'Useful Links ',
                                 style: GoogleFonts.montserrat(
-                                    color: Color(0XFFD434FE),
+                                    color: const Color(0XFFD434FE),
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600),
                                 textAlign: TextAlign.left,
@@ -811,12 +811,12 @@ class HomePage extends StatelessWidget {
                                   Text(
                                     'Follow us',
                                     style: GoogleFonts.montserrat(
-                                        color: Color(0XFFD434FE),
+                                        color: const Color(0XFFD434FE),
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),
                                     textAlign: TextAlign.left,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 12,
                                   ),
                                   Image.asset('images/Socialmedia.png'),
@@ -829,6 +829,68 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+                //CONTACT US
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 12),
+                      Text(
+                        'Contact Us',
+                        style: GoogleFonts.montserrat(
+                            color: const Color(0XFFD434FE),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                        textAlign: TextAlign.left,
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        children: [
+                          const Icon(Icons.phone, color: Colors.white),
+                          const SizedBox(width: 30),
+                          Text(
+                            '+234 6707653444',
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.location_on,
+                            color: Colors.white,
+                          ),
+                          const SizedBox(width: 30),
+                          Text(
+                            '27,Alara Street \nYaba 100012 \nLagos State',
+                            style: GoogleFonts.montserrat(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  'All rights reserved. © getlinked Ltd.',
+                  style: GoogleFonts.montserrat(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400),
+                  // textAlign: TextAlign.left,
+                ),
+                const SizedBox(height: 62),
               ],
             ),
           ),

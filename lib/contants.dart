@@ -76,16 +76,13 @@ class MyButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           gradient: const LinearGradient(
-            stops: [
-              //0.01,
-              6.0, 400.7
-            ],
+            stops: [0.01, 1.0, 4100.7],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              // Color(0xFF93AFF),
-              Color(0XFFD434FE),
-              Color(0XFF150E28)
+              Color.fromARGB(255, 216, 14, 183),
+              Color.fromARGB(255, 55, 6, 68),
+              Color.fromARGB(255, 232, 123, 228)
             ],
           ),
         ),
@@ -200,6 +197,162 @@ class EventCard extends StatelessWidget {
       child: Container(
         child: child,
       ),
+    );
+  }
+}
+
+class MyTextField extends StatelessWidget {
+  final String fieldtext;
+  final double height;
+
+  const MyTextField({super.key, required this.fieldtext, required this.height});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 298,
+      height: height,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.white,
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Text(
+          fieldtext,
+          style: GoogleFonts.montserrat(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),
+          textAlign: TextAlign.left,
+        ),
+      ),
+    );
+  }
+}
+
+class MyTextFields extends StatelessWidget {
+  final String fieldtext;
+  final String fieldtext2;
+  final double height;
+  final double width;
+
+  MyTextFields(
+      {super.key,
+      required this.fieldtext,
+      required this.fieldtext2,
+      required this.height,
+      required this.width});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          fieldtext,
+          style: GoogleFonts.montserrat(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.left,
+        ),
+        const SizedBox(height: 5),
+        Container(
+          width: width,
+          height: height,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey,
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(5)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              fieldtext2,
+              style: GoogleFonts.montserrat(
+                color: Colors.grey[400],
+                fontSize: 13,
+                fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class ITextFields extends StatelessWidget {
+  final String fieldtext;
+  final String fieldtext2;
+  final double height;
+  final double width;
+
+  ITextFields({
+    super.key,
+    required this.fieldtext,
+    required this.fieldtext2,
+    required this.height,
+    required this.width,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          fieldtext,
+          style: GoogleFonts.montserrat(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.left,
+        ),
+        const SizedBox(height: 5),
+        Container(
+          width: width,
+          height: height,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey,
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(5),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  fieldtext2,
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[400],
+                    fontSize: 13,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(
+                  width: 3,
+                ),
+                const Icon(
+                  Icons.arrow_drop_down_outlined,
+                  color: Colors.white,
+                  size: 10,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
